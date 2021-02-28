@@ -5,12 +5,19 @@
 // Message: "You only fail when you stop trying!", "Don't stop until youre proud", "Good things take time."
 // Ending: "Keep it up :)", "Until next time :D", "Have a fantastic day!"
 
-const greetng = ["Hey there!", "Heyaaaa!", "~Greetings Summoner~"];
-const message = ["You only fail when you stop trying!", "Don't stop until you're proud.", "Good things take time."];
-const ending = ["Keep it up :)", "Until next time :D", "Have a fantastic day!"];
+const mixMessage = {
+    greeting: ["Hey there!", "Heyaaaa!", "~Greetings Summoner~"],
+    message: ["You only fail when you stop trying!", "Don't stop until you're proud.", "Good things take time."],
+    ending: ["Keep it up :)", "Until next time :D", "Have a fantastic day!"],
 
-const randomNumber = list => Math.floor(Math.random() * list.length);
+    randomNumber(list){Math.floor(Math.random() * this.list.length)},
 
-const makeMix = () => {
-    g
+    makeMix(){
+        temp = [];
+        temp.push(greeting[this.randomNumber(greeting)]);
+        temp.push(message[this.randomNumber(message)]);
+        temp.push(ending[this.randomNumber(ending)]);
+        return temp.join("\n");
+    }
 }
+
