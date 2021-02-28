@@ -22,3 +22,4 @@ const mixMessage = {
 }
 
 console.log(mixMessage.makeMix());
+//
